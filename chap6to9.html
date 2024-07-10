@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Q1        document.write("<h1>Question : 1</h1>")
+        var a = 10;
+        document.write('Result <br/> The value of a is:' + a);
+        var dot = "...............................";
+        document.write("<br/>" + dot);
+        ++a;
+        document.write("<br/> <br/> The value of ++a is:" + a + "<br/> Now the value of a is :" + a + " <br/> <br/> The value of a++ is :" + a);
+
+        a++;
+        document.write("<br/> Now the value of a is:" + a);
+
+        --a;
+        document.write("<br/> <br/> The value of --a is :" + a + "<br/> Now the value of a is :" + a + "<br/> <br/> The value of a-- is:" + a);
+
+        a--;
+        document.write("<br/>Now the value of a is :" + a);
+
+        //  Q2
+        document.write("<h1>Question: 2</h1>")
+        var a = 2, b = 1;
+        --a; // a = 1
+        --a - --b; // 1 - 0 = 1
+        var a = 2, b = 1;
+        --a; // a = 1
+        --a - --b; // 1 - 0 = 1
+        --a - --b + ++b; // 1 - 0 + 1 = 2
+        var a = 2, b = 1;
+        --a; // a = 1
+        --a - --b; // 1 - 0 = 1
+        --a - --b + ++b; // 1 - 0 + 1 = 2
+        --a - --b + ++b + b--; // 1 - 0 + 1 + 1 = 3
+        var a = 2, b = 1;
+        var result = --a - --b + ++b + b--;
+        document.write("a is" + " ", a, "<br/>");
+        document.write("b is " + " ", b, "<br/>");
+        document.write('result is' + " ", result);
+
+        // Q3
+        document.write("<h1>Question: 3</h1>")
+        var user = prompt("Enter your Name");
+        alert("Welcome to the Website");
+        document.write(user);
+
+        // Q4/Q5
+        document.write("<h1>Question: 4/5</h1>")
+        var num = prompt("Enter a number");
+        if (num == "") {
+            num = 5;
+        }
+        document.write(`Table of ${num}`);
+        document.write("<br>");
+        for (var i = 1; i <= 10; i++) {
+            document.write(`${num} x ${i} = ${num * i}`);
+            document.write("<br>");
+        };
+
+        //   Q6
+        document.write("<h1>Question: 6</h1>")
+
+        var sub1 = prompt("Enter first subject name");
+        var sub2 = prompt("Enter second subject name");
+        var sub3 = prompt("Enter third subject name");
+        var totalMarks = 100;
+        var totalMarks1 = 300;
+        var sub1Marks = prompt("Enter first subject marks");
+        var sub2Marks = prompt("Enter second subject marks");
+        var sub3Marks = prompt("Enter third subject marks");
+        var total = parseInt(sub1Marks) + parseInt(sub2Marks) + parseInt(sub3Marks);
+        var percentage1 = (sub1Marks / totalMarks) * 100;
+        var percentage2 = (sub2Marks / totalMarks) * 100;
+        var percentage3 = (sub3Marks / totalMarks) * 100;
+        var percentages = (total / totalMarks1) * 100;
+        document.write(`<table cellpadding = "10px">
+        <tr>
+        <th>Subject</th>
+        <th>Total Marks</th>
+        <th>Obtained Marks</th>
+        <th>Percentage</th>
+         </tr>
+         <tr>
+         <td>${sub1}</td>
+         <td>${totalMarks}</td>
+         <td>${sub1Marks}</td>
+         <td>${percentage1.toFixed(2)}%</td>
+         </tr>
+         <tr>
+         <td>${sub2}</td>
+         <td>${totalMarks}</td>
+         <td>${sub2Marks}</td>
+         <td>${percentage2.toFixed(2)}%</td>
+         </tr>
+         <tr>
+         <td>${sub3}</td>
+         <td>${totalMarks}</td>
+         <td>${sub3Marks}</td>
+         <td>${percentage3.toFixed(2)}%</td>
+         </tr>
+         <tr>
+         <td>Total</td>
+         <td>${totalMarks1}</td>
+         <td>${total}</td>
+         <td>${percentages.toFixed(2)}%</td>
+         </tr>
+        </table>`);
+
+    </script>
+</body>
+
+</html>

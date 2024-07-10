@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Q1
+        document.write("<h1>Question:1</h1>")
+        var multiDimensionalEmpty = [[]];
+
+        // Q2
+        document.write("<h1>Question:2</h1>")
+        var matrix = [
+            [0, 1, 2, 3],
+            [1, 0, 1, 2],
+            [2, 1, 0, 1]
+        ];
+
+        // Q3
+        document.write("<h1>Question:3</h1>")
+        for (var i = 0; i <= 10; i++) {
+            document.write(i + "<br/>");
+        }
+
+        //  Q4
+        document.write("<h1>Question:4</h1>")
+
+        var userInp = prompt(" Enter a number to show its multiplication table");
+        var table = prompt("Enter length multiplication table")
+        for (var i = 1; i <= table; i++) {
+            document.write(userInp + "x" + i + "=" + userInp * i + '<br>');
+        }
+        // Q5
+        document.write("<h1>Question:5</h1>")
+        var fruits = ["Apple", "Banana", "Mango", "Orange", "Strawberry"];
+        for (var i = 0; i < fruits.length; i++) {
+            document.write(fruits[i] + '<br>');
+        }
+        document.write("<br/>Element at index 0 is Apple");
+        document.write("<br/>Element at index 1 is Banana ");
+        document.write("<br/>Element at index 2 is Mango");
+        document.write("<br/>Element at index 3 is Orange");
+        document.write("<br/>Element at index 4 is Strawberry ");
+        // Q6
+        document.write("<h1>Question:6</h1>")
+        var counting = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        var reverseCounting = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+        var even = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+        var odd = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+        var series = [2, "k", 4, "k", 6, "k", 8, "k", 10, "k", 12, "k", 14, "k", 16, "k", 18, "k", 20, "k"];
+
+        document.write('<h3>Counting:</h3><br>');
+        for (var i = 0; i < counting.length; i++) {
+            document.write(counting[i] + ' ');
+        }
+
+        document.write('<h3>Reverse Counting:</h3><br>');
+        for (var i = 0; i < reverseCounting.length; i++) {
+            document.write(reverseCounting[i] + ' ');
+        }
+
+        document.write('<h3>Even:</h3><br>');
+        for (var i = 0; i < even.length; i++) {
+            document.write(even[i] + ' ');
+        }
+
+        document.write('<h3>Odd:</h3><br>');
+        for (var i = 0; i < odd.length; i++) {
+            document.write(odd[i] + ' ');
+        }
+        document.write('<h3>Series:</h3><br>');
+        for (var i = 0; i < series.length; i++) {
+            document.write(series[i] + ' ');
+        }
+
+
+        // Q7
+        document.write("<h1>Question:7</h1>")
+        var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+        var userInput = prompt("Welcome to ABC Bakery!What do you want to order sir / ma'am?");
+        var found = false;
+
+        // Convert user input to lowercase for case-insensitive comparison
+        userInput = userInput.toLowerCase();
+
+        for (var i = 0; i < A.length; i++) {
+            if (A[i] === userInput) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            document.write(userInput + " is available at index " + i + " in our bakery.");
+        } else {
+            document.write("Sorry, " + userInput + " is not available in our bakery.");
+        }
+
+        // Q8
+        document.write("<h1>Question:8</h1>")
+        var a = [24, 53, 78, 91, 12];
+        var largest = a[0];  // Assume the first number is the largest
+
+        for (var i = 1; i < a.length; i++) {
+            if (a[i] > largest) {
+                largest = a[i];
+            }
+        }
+        document.write("Array Items", a, "<br/>");
+        document.write("The largest number in the array is: " + largest);
+
+        //Q9
+        document.write("<h1>Question:9</h1>")
+        var a = [24, 53, 78, 91, 12];
+        var smallest = a[0]; // Assume the first number is the smallest
+
+        for (var i = 1; i < a.length; i++) {
+            if (a[i] < smallest) {
+                smallest = a[i];
+            }
+        }
+        document.write("Array Items", a, "<br/>");
+        document.write("The smallest number in the array is: " + smallest);
+
+        // Q10
+        document.write("<h1>Question:10</h1>")
+        for (var i = 1; i <= 100; i++) {
+            if (i % 5 === 0) {
+                document.write(i + " ");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
